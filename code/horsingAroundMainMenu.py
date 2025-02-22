@@ -1,6 +1,7 @@
 import pygame
 import sys
 import os
+from mainMenu import show_menu
 
 # Initialize Pygame
 pygame.init()
@@ -9,9 +10,8 @@ pygame.init()
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
 pygame.display.set_caption("My Game")
 
-# load assets
-assets_folder = os.path.join(os.path.dirname(__file__), '../assets/visuals/mainMenu')
-background_image = pygame.image.load(os.path.join(assets_folder, 'bg.png'))
+# Initialize current screen
+current_screen = "menu"
 
 # Game Loop
 while True:
@@ -20,9 +20,17 @@ while True:
             pygame.quit()
             sys.exit()
 
-    # fill background
-    background_image = pygame.transform.scale(background_image, (1530, 860))
-    screen.blit(background_image, (2, 3))
+    # Check which screen to show
+    if current_screen == "menu":
+        current_screen = show_menu(screen)
+    elif   current_screen == "saved_game":
+        current_screen = show_saved(screen)
+    elif current_screen == "game":
+        current_screen = show_game(screen)
+    elif current_screen == "settings":
+        current_screen = show_settings(screen)
+    elif current_screen == "credits":
+        current_screen = show_credits(screen)
 
     # Update the display
     pygame.display.flip()
