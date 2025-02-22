@@ -1,0 +1,50 @@
+BEGINNING
+
+Narrator:= Running with bread in your mouth, you think to yourself: “It’s my first class of the semester and I can’t be late! I’ll become the weird kid that shows up late on their first day!”. Without taking a look, you turn around the corner and bump into someone. BAM! You crash onto the ground. “Ouch…!” Suddenly, an unfamiliar voice calls out to you…
+
+Moneighca:= “Are you ok? You seem to be in such a hurry. Sorry! I’ll help you up.” 
+*She’s really pretty… Have I seen her around somewhere before?* *blushes*
+I take her hand.
+
+Moneighca:= “What’s your name?” *She casually asks, as we for some reason start walking together*
+
+Prompt:= Choose your Name (From this point on when ‘MC’ appears in the dialogue it will be replaced with the chosen name by the player)
+
+MC:= I- I- I AM SO SORRY! I didn’t see you there! It is my first day and I’m already running late for class. My Name is MC, and I am in class 1-A. 
+
+Moneighca:= Nice to meet you MC! I see, in that case, Don’t worry we’ll just let the teacher know you were helping me out with some of my duties. I’m sure they’ll understand. Let’s go, I'll walk you to your class.
+
+MC:= Thank you Senpai! I really appreciate it. *Wait… What did she mean by helping out?*
+
+Narrator:= With the academy just in sight, you hear the school bell chime. Guess you’ll have to live with being known as the tardy weirdo for the first week of school after all.
+
+Narrator:= The two of you approach the gate. Your eyes meet the stern looks of the teachers standing by its entrance. You slink back a little, quickly diverting your gaze as you try to hide your embarrassment. 
+
+Narrator:= But before anybody could say anything, Moneighca quickly raises her hoof to shield you.
+
+Moneighca:= “They’re with me. I apologize for being late, especially at the start of a new academic year. It seems student council preparations took longer than expected, even with the extra help from this very kind student.” She glances over to you.
+Student Council?! Then she must be…!
+
+Teacher:= Sigh “Well I trust you not to let it happen again, president. Off to class you go now”
+
+Moneighca:= “Yes, of course. Thank you very much.” She walks ahead and you reluctantly follow her from behind.
+
+MC:= T-thank you! You really saved me back there… but is this really okay? You were late because of me and even got into trouble for it…
+
+Moneighca:= “Don’t worry about it, I’m just glad I could help.” 
+
+Narrator:= She glances at the watch on her fetlock. “It was really nice meeting you, but I suppose it’s about time we both get to class now huh.” She smiles softly at you, the warm morning sun reflecting off her smooth skin and rose-tinted cheeks.
+
+MC:= Badump
+
+MC:= … Badump?
+
+Narrator:= Your face flushes slightly. “Y-y-y-yes! Right! S-sorry to bother you and thank you again for your help!” You struggle to get words out before quickly scrambling away. 
+
+MC:= What was that? 
+
+Narrator:= You try to ignore the strange sensation in your chest and focus on getting to class. 
+
+Narrator:= You head to class, the lecture elapses as usual, but it is so boring you nod out a few times before the bell finally marks the ending of the first period. Exiting the class you bump into Moneigcha.
+
+END
