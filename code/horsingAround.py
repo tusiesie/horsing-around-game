@@ -1,14 +1,14 @@
 import pygame
 import sys
-import os
 from mainMenu import show_menu
+from settingsMenu import show_settings
 
 # Initialize Pygame
 pygame.init()
 
 # Set up the screen
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
-pygame.display.set_caption("My Game")
+pygame.display.set_caption("Horsing Around")
 
 # Initialize current screen
 current_screen = "menu"
@@ -28,7 +28,7 @@ while True:
     elif current_screen == "game":
         current_screen = show_game(screen)
     elif current_screen == "settings":
-        current_screen = show_settings(screen)
+        current_screen = show_settings(screen, current_screen)
     elif current_screen == "credits":
         current_screen = show_credits(screen)
 
