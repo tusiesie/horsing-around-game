@@ -2,6 +2,7 @@ import pygame
 import sys
 import os
 
+from gameFunctions import change_screen
 
 # load assets
 assets_folder = os.path.join(os.path.dirname(__file__), '../assets/visuals/mainMenu')
@@ -23,10 +24,10 @@ image_quit_hovered = pygame.image.load(os.path.join(assets_folder, 'quitButtHove
 
 
 def show_menu(screen):
-    button_continue = Button(100, 400, image_continue, image_continue_hovered, action=lambda: change_screen('game'))
-    button_newgame = Button(100, 475, image_newgame, image_newgame_hovered, action=lambda: change_screen('game'))
-    button_settings = Button(100, 550, image_settings, image_settings_hovered, action=lambda: change_screen('settings'))
-    button_credits = Button(100, 625, image_credits, image_credits_hovered, action=lambda: change_screen('settings'))
+    button_continue = Button(100, 400, image_continue, image_continue_hovered, action=lambda: change_screen('game', screen, background_image))
+    button_newgame = Button(100, 475, image_newgame, image_newgame_hovered, action=lambda: change_screen('game', screen, background_image))
+    button_settings = Button(100, 550, image_settings, image_settings_hovered, action=lambda: change_screen('settings', screen, background_image))
+    button_credits = Button(100, 625, image_credits, image_credits_hovered, action=lambda: change_screen('settings', screen, background_image))
     button_quit = Button(100, 700, image_quit, image_quit_hovered, action=sys.exit)
 
     # fill background

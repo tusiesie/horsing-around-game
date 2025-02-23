@@ -2,6 +2,7 @@ import pygame
 import sys
 from mainMenu import show_menu
 from settingsMenu import show_settings
+from gameFunctions import show_game
 from audioManager import AudioManager
 
 
