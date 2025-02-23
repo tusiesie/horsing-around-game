@@ -2,9 +2,12 @@ import pygame
 import sys
 from mainMenu import show_menu
 from settingsMenu import show_settings
-
+from audioManager import AudioManager
 # Initialize Pygame
 pygame.init()
+
+sound = AudioManager()
+
 
 # Set up the screen
 screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN)
