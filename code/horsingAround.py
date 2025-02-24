@@ -42,7 +42,7 @@ class Game:
             elif self.current_screen == "game":
                 self.current_screen = show_game(self.screen)
             elif self.current_screen == "settings":
-                self.current_screen = show_settings(self.screen, self.current_screen, self.sound)
+                self.current_screen = show_settings(self.screen, "menu", self.sound)
             elif self.current_screen == "credits":
                 self.current_screen = show_credits(self.screen)
 
