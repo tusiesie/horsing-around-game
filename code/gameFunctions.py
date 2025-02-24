@@ -1,8 +1,9 @@
-from os import WSTOPSIG
 import pygame
+import pygame.freetype
+from os import WSTOPSIG
 
 from sceneManager import Background
-from context import Arcs, Context
+from context import Arcs,Context 
 
 class Transitions:
     def __init__(self):
@@ -38,17 +39,19 @@ class Transitions:
             self.draw(screen, bg)
             if alpha > 255:
                 return
+    def typewriter(self, text):
+        pass
 
 
 T = Transitions()
 ctx = Context()
 
-def display_ui():
-    pass
 # starts a new game
 def show_game(screen):
     ctx.load_arc(Arcs.BEGINNING)
-    display_ui()
+    character, line = next(ctx.get_dialogue())
+    text_surface, rect = ctx.font.render( f'{character}: {line}', (0,0,0) )
+    screen.blit(text_surface, (40, 250))
     return "game"
 
 def show_saved(screen):

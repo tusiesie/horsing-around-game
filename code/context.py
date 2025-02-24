@@ -14,7 +14,16 @@ class Arcs(Enum):
    HORSE_PROM_MURDER   = 'HORSE PROM MURDER'
    ONSEN               = 'ONSEN'   
 
-class Context:
+
+class Singleton(type):
+    _instances = {}
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+        return cls._instances[cls]
+
+
+class Context(metaclass = Singleton):
     '''
     takes in an arc as a paramter (all caps), this will read the appropriate text from dialogues.txt
     arcs:
@@ -31,12 +40,17 @@ class Context:
         - ONSEN
     '''
     
-    def __init__(self, arc = Arcs.BEGINNING.value):
-        self.arc = arc
+    def __init__(self):
+
+        self.arc = Arcs.BEGINNING.value
         self.arc_chars = [] # characters for the current arc
         self.dialogue_idx = 0
         self.dialogues= []
         self.parsing = False
+        self.font = None
+
+    def pygame_init(self, pygame):
+        self.font = pygame.freetype.Font(None, 24)
 
     def load_text(self):
         script = os.path.join(os.path.dirname(__file__), 'dialogues.txt')
@@ -67,9 +81,8 @@ class Context:
 
     def get_dialogue(self):
         return iter(self.dialogues)
+
                      
-
-
 
 
 ''' example usage to load the dialogues of the BEGINNING

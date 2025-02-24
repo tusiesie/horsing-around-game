@@ -5,12 +5,16 @@ from settingsMenu import show_settings
 from gameFunctions import show_game, show_saved, show_credits
 from audioManager import AudioManager
 
+from context import Context
+
+
 
 class Game:
     def __init__(self):
         # Initialize Pygame
         pygame.init()
-
+        ctx = Context() # initialize global context
+        ctx.pygame_init(pygame)
         # Initialize audio manager
         self.sound = AudioManager()
 
@@ -20,6 +24,7 @@ class Game:
 
         # Initialize current screen
         self.current_screen = "menu"
+
 
     def run(self):
         # Game Loop
