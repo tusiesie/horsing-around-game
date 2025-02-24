@@ -1,6 +1,8 @@
+from os import WSTOPSIG
 import pygame
 
 from sceneManager import Background
+from context import Arcs, Context
 
 class Transitions:
     def __init__(self):
@@ -39,10 +41,21 @@ class Transitions:
 
 
 T = Transitions()
+ctx = Context()
+
+def display_ui():
+    pass
 # starts a new game
 def show_game(screen):
+    ctx.load_arc(Arcs.BEGINNING)
+    display_ui()
     return "game"
 
+def show_saved(screen):
+    return "saved_game"
+
+def show_credits(screen):
+    return "credits"
 def change_screen(name, screen, prev_bg):
     if name == "game":
         bg = pygame.image.load(Background.HIGHSCHOOL_STAIRS.value)
