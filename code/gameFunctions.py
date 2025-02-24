@@ -1,6 +1,6 @@
 import pygame
 import pygame.freetype
-from os import WSTOPSIG
+# from os import WSTOPSIG
 
 from sceneManager import Background
 from context import Arcs,Context 

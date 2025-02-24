@@ -2,6 +2,7 @@ import pygame
 import sys
 from mainMenu import show_menu
 from settingsMenu import show_settings
+from pauseMenu import show_pause
 from gameFunctions import show_game, show_saved, show_credits
 from audioManager import AudioManager
 
@@ -24,6 +25,7 @@ class Game:
 
         # Initialize current screen
         self.current_screen = "menu"
+        # self.prev_screen = None
 
 
     def run(self):
@@ -45,6 +47,8 @@ class Game:
                 self.current_screen = show_settings(self.screen, "menu", self.sound)
             elif self.current_screen == "credits":
                 self.current_screen = show_credits(self.screen)
+            elif self.current_screen == "pause":
+                self.current_screen = show_pause(self.screen)
 
             # Update the display
             pygame.display.flip()
