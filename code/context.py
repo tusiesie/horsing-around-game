@@ -54,7 +54,7 @@ class Context(metaclass = Singleton):
 
     def load_text(self):
         script = os.path.join(os.path.dirname(__file__), 'dialogues.txt')
-        with open(script) as dialogues:
+        with open(script, encoding="utf-8") as dialogues:
 
             for dialogue in dialogues:
              
@@ -66,7 +66,7 @@ class Context(metaclass = Singleton):
                 
                 if self.parsing:
                     if  ':=' in dialogue:
-                        character, line = dialogue.split(':=')
+                        character, line = dialogue.split(':=') # Hah penis
                         self.dialogues.insert( self.dialogue_idx, [ character, line ])
 
                     if dialogue == '\n':
