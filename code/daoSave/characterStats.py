@@ -5,7 +5,7 @@ class CharacterStats:
 
     def __init__(self):
         self.stats = self.default_stats()
-        self.filename = "savefile.json"
+        self.filename = "code/daoSave/savefile.json"
         self.save_game()
 
     def default_stats(self):
