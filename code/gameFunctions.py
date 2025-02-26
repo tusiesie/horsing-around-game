@@ -94,7 +94,7 @@ def show_dialogue_box():
     pass
 
 # starts a new game
-def show_game(screen):
+def show_game(screen, stats):
 
     ctx.load_arc(Arcs.BEGINNING)
 
@@ -107,7 +107,7 @@ def show_game(screen):
 
     return "game"
 
-def show_saved(screen):
+def show_saved(screen, stats):
     return "saved_game"
 
 def show_credits(screen):
